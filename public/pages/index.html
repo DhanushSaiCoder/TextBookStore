@@ -20,13 +20,18 @@
   <body>
     <nav>
       <ul>
-        <li class="activeNav">Home</li>
         <li>
-          Store
-          <ul>
-            <li>&emsp;Buy</li>
-            <li>&emsp;Sell</li>
-          </ul>
+          <button onclick="openHome()" id="homeBtn" class="navBtns activeNav">
+            Home
+          </button>
+        </li>
+        <li>
+          <button onclick="openBuy()" id="buyBtn" class="navBtns">Buy</button>
+        </li>
+        <li>
+          <button onclick="openSell()" id="sellBtn" class="navBtns">
+            Sell
+          </button>
         </li>
       </ul>
     </nav>
@@ -37,5 +42,17 @@
         <button class="headerNavBtns">Book Requests</button>
       </div>
     </header>
+    <div id="contentDiv">
+      <div id="homeDiv">
+        <h1>Home</h1>
+      </div>
+      <div id="buyDiv">
+        <h1>Buy</h1>
+      </div>
+      <div id="sellDiv">
+        <h1>Sell</h1>
+      </div>
+    </div>
+    <script src="../scripts/main.js"></script>
   </body>
 </html>
