@@ -1,7 +1,9 @@
-const express = require('express')
-const mongoose = require('mongoose')
+const mongoose = require("mongoose");
 const Joi = require("joi");
+const JoiObjectId = require("joi-objectid");
+Joi.objectId = JoiObjectId(Joi);
 
+// Book schema definition
 const bookSchema = new mongoose.Schema({
     seller: { type: mongoose.Schema.Types.ObjectId, ref: "User", required: true },
     name: { type: String, required: true },
@@ -10,14 +12,17 @@ const bookSchema = new mongoose.Schema({
     semester: { type: Number, required: true },
     originalPrice: { type: Number, required: true },
     sellingPrice: { type: Number, required: true },
-    fullName: { type: Number, required: true },
+    fullName: { type: String, required: true },
     phoneNumber: { type: Number, required: true },
-})
+});
+
+// Model definition
 const Book = mongoose.model("Book", bookSchema);
 
+// Validation function
 function validateBook(book) {
     const schema = Joi.object({
-        user: Joi.string().required(),
+        seller: Joi.objectId().required(), // Validate MongoDB ObjectId
         name: Joi.string().required(),
         branch: Joi.string().required(),
         curriculum: Joi.string().required(),
@@ -30,4 +35,6 @@ function validateBook(book) {
 
     return schema.validate(book);
 }
-module.exports = { Book, validateBook }
+
+// Export the model and validation function
+module.exports = { Book, validateBook };

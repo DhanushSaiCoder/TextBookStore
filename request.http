@@ -1,0 +1,14 @@
+POST http://localhost:3000/book
+Content-Type: application/json
+
+{
+  "seller": "64f83b9bc3a4f2d5a1e67e53",
+  "name": "Data Structures and Algorithms",
+  "branch": "Computer Science",
+  "curriculum": "B.Tech",
+  "semester": 3,
+  "originalPrice": 1000,
+  "sellingPrice": 600,
+  "fullName": "Hannah Scott",
+  "phoneNumber": 9678901234
+}
