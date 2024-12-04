@@ -88,3 +88,9 @@ function sellBook() {
 
     // Optionally, fetch user's books and display them
 }
+
+function fetchUsersBooks(){
+    const userId = "64f83b9bc3a4f2d5a1e67e51"
+
+    
+}

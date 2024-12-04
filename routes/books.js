@@ -4,6 +4,16 @@ const router = express.Router();
 const jwt = require("jsonwebtoken");
 const { Book, validateBook } = require("../models/Book");
 
+router.get('/:id',async (req,res) => {
+    try {
+        const books = await Book.find({seller: req.params.id})
+        res.send(books)
+    } catch (error) {
+        console.error("Error getting books:", error);
+        res.status(500).send({ message: "An error occurred", error });
+    }
+})
+
 router.post("/", async (req, res) => {
     try {
         // Validate the book object

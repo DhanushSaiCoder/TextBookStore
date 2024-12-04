@@ -12,3 +12,5 @@ Content-Type: application/json
   "fullName": "Hannah Scott",
   "phoneNumber": 9678901234
 }
+###
+GET http://localhost:3000/book/64f83b9bc3a4f2d5a1e67e51
