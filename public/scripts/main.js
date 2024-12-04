@@ -108,5 +108,27 @@ async function fetchUsersBooks() {
 }
 
 function displayUsersBooks(books){
-    console.log(books)
+    const selledBooksData = document.getElementById('selledBooksData')
+    let actualHtml = selledBooksData.innerHTML
+    
+    
+    actualHtml = ''
+    for(var i in books){
+        let book = books[i]
+        let html = `
+        <div class="selledBooks">
+            <div class="SubjectName">
+                <h2>${books[i].name}</h2>
+            </div>
+
+            <div class="bookDetails">
+                <p class="details">${book.branch}  ${book.curriculum}  ${book.semester}</p>
+                <p class="pricing"><span class="originalPrice">${book.originalPrice}</span> <span class="sellingPrice">₹${book.sellingPrice}/-</span></p>
+            </div>
+
+            <button onclick="removeSellingBook(${book._id})" class="removeBtn">Remove</button>
+        </div>`;
+        actualHtml += html;
+    }
+    selledBooksData.innerHTML = actualHtml;
 }
