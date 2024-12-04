@@ -3,6 +3,8 @@
   margin: 0;
   box-sizing: border-box;
   font-family: "Public Sans", sans-serif;
+  /* border: 1px solid white; */
+  scrollbar-width: none;
 }
 body {
   background-color: #f9f5e9;
@@ -12,7 +14,8 @@ body {
 
 nav {
   color: #f9f5e9;
-  position: absolute;
+  position: fixed;
+
   top: 0;
   left: 0;
   background-color: #32312e;
@@ -52,6 +55,8 @@ header {
   align-items: center;
   justify-content: space-between;
   padding: 16px 15px;
+  background-color: #f9f5e9;
+  z-index: 9;
 }
 header h1 {
   font-family: "Prosto One", sans-serif;
@@ -119,18 +124,74 @@ header h1 {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
-  flex-wrap: wrap;
+  /* flex-direction: column; */
+  flex-wrap: nowrap;
+
 }
 #newBookBtn {
   padding: 10px 15px;
   border: none;
-  background: transparent;
+  background: #32312e;
+  color: #f9f5e9;
   border: 2px solid #32312e;
   font-weight: bold;
   border-radius: 10px;
 }
 #newBookBtn:hover {
   cursor: pointer;
-  background-color: #32312e14;
+  background-color: #4e4c47;
 }
+#selledBooksData{
+  width: 65vw;
+  display: flex;align-items: center;justify-content: center;
+
+}
+#sellForm {
+  width: 20vw;
+  padding: 30px 10px;
+  background-color:#00000029;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column; 
+  gap: 50px;
+  border: 1px solid #32312e31;
+  border-radius: 0 20px 20px 0;  
+}
+#sellForm h2{
+  color: rgb(45, 144, 45);
+}
+#sellForm fieldset {
+  border-right: none;
+  border-left: none;
+  border-bottom: none;
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+#sellForm fieldset legend {
+  color: #32312e;
+  font-weight: bold;
+  font-size: 25px;
+  margin: 20px 0;
+
+}
+#sellForm fieldset label {
+  opacity: 0.6;
+  font-weight: bold;
+  margin: 10px 0;
+
+}
+#sellForm fieldset input{
+  width:auto;
+  height: 45px;
+  border: 2px solid #32312e;
+  background: transparent;
+  color: #32312e;
+  font-size: 19px;
+  border-radius: 10px;
+}
+

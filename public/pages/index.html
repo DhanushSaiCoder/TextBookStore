@@ -54,7 +54,51 @@
           <h1>Sell</h1>
         </div>
         <div id="sellContent">
-          <button id="newBookBtn">+ Sell New Book</button>
+          <div id="selledBooksData">
+            
+          </div>
+          <div id="sellForm">
+            <h2>New Book: </h2>
+            <fieldset>
+              <legend>Book Details: </legend>
+
+                <label for="subjectNameInp">Subject:</label>
+                <input type="text" id="subjectNameInp" />
+
+                <label for="branchInp">Branch:</label>
+                <input type="text" id="branchInp" />
+
+                <label for="curriculumInp">Curriculum:</label>
+                <input type="text" id="curriculumInp" />
+
+                <label for="semesterInp">Semester:</label>
+                <input type="text" id="semesterInp" />
+            </fieldset>
+
+            <fieldset>
+              <legend>Pricing Details: </legend>
+
+                <label for="originalPriceInp">Original Price:</label>
+                <input type="number" id="originalPriceInp" />
+
+                <label for="sellingPriceInp">Selling Price:</label>
+                <input type="number" id="sellingPriceInp" />
+            </fieldset>
+
+            <fieldset>
+              <legend>Contact Details: </legend>
+
+                <label for="fullNameInp">Full Name:</label>
+                <input type="text" id="fullNameInp" />
+
+                <label for="phoneNumberInp">Branch:</label>
+                <input type="text" id="branchInp" />
+
+            </fieldset>
+            <button onclick="sellBook()" id="newBookBtn">
+              + Sell New Book
+            </button>
+          </div>
         </div>
       </div>
     </div>
