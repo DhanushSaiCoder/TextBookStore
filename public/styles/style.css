@@ -204,3 +204,6 @@ header h1 {
   font-size: 19px;
   border-radius: 10px;  
 }
+.selects:hover{
+  cursor: pointer;
+}
