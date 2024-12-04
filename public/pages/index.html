@@ -62,17 +62,33 @@
             <fieldset>
               <legend>Book Details: </legend>
 
-                <label for="subjectNameInp">Subject:</label>
+                <label for="subjectNameInp">Subject Name:</label>
                 <input type="text" id="subjectNameInp" />
 
                 <label for="branchInp">Branch:</label>
-                <input type="text" id="branchInp" />
+                <select class="selects" name="branchInp" id="branchInp">
+                  <option value="CME">CME</option>
+                  <option value="MEC">MEC</option>
+                  <option value="EEE">EEE</option>
+                  <option value="ECE">ECE</option>
+                  <option value="CIV">CIV</option> 
+                </select>
 
                 <label for="curriculumInp">Curriculum:</label>
-                <input type="text" id="curriculumInp" />
+                <select class="selects" name="curriculumInp" id="curriculumInp">
+                  <option value="C-24">C-24</option>
+                  <option value="C-23">C-23</option>
+                  <option value="C-20">C-20</option>
+                </select>
 
                 <label for="semesterInp">Semester:</label>
-                <input type="text" id="semesterInp" />
+                <select class="selects" name="semesterInp" id="semesterInp">
+                  <option value="1">1st Year</option>
+                  <option value="3">III Sem</option>
+                  <option value="4">IV Sem</option>
+                  <option value="5">V Sem</option>
+                  <option value="6">VI Sem</option>
+                </select>
             </fieldset>
 
             <fieldset>
@@ -91,8 +107,8 @@
                 <label for="fullNameInp">Full Name:</label>
                 <input type="text" id="fullNameInp" />
 
-                <label for="phoneNumberInp">Branch:</label>
-                <input type="text" id="branchInp" />
+                <label for="phoneNumberInp">Phone Number:</label>
+                <input type="number" id="branchInp" />
 
             </fieldset>
             <button onclick="sellBook()" id="newBookBtn">
