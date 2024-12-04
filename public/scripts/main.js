@@ -37,6 +37,7 @@ function openBuy() {
 }
 
 function openSell() {
+    fetchUsersBooks()
     homeBtn.classList.remove('activeNav');
     buyBtn.classList.remove('activeNav');
     sellBtn.classList.add('activeNav');
@@ -89,8 +90,23 @@ function sellBook() {
     // Optionally, fetch user's books and display them
 }
 
-function fetchUsersBooks(){
-    const userId = "64f83b9bc3a4f2d5a1e67e51"
+async function fetchUsersBooks() {
+    const userId = "64f83b9bc3a4f2d5a1e67e51";
 
-    
+    try {
+        const response = await fetch(`/book/${userId}`, {
+            method: "GET",
+            headers: {"Content-Type": "application/json"}
+        });
+        
+        const data = await response.json(); // Await the JSON parsing
+
+        displayUsersBooks(data); // Pass the data to the display function
+    } catch (err) {
+        console.error('Error while fetching user\'s books', err);
+    }
+}
+
+function displayUsersBooks(books){
+    console.log(books)
 }
